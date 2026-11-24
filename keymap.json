@@ -76,5 +76,58 @@
     "unbind": {
       "cmd-shift-e": "project_panel::ToggleFocus"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-x 1": [
+        "pane::CloseOtherItems",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-c ctrl-a": "agent::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-c p s": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-c p s": "project_panel::NewSearchInDirectory"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "alt-cmd-shift-f": "project_panel::NewSearchInDirectory"
+    }
+  },
+  {
+    // Additional Emacs bindings missing from Zed's built-in Emacs keymap
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": "editor::Newline", // electric-newline-and-maybe-indent
+      "alt-/": "editor::ShowCompletions", // dabbrev-expand
+      "alt-%": "buffer_search::DeployReplace", // query-replace
+      "alt-g n": "editor::GoToDiagnostic", // next-error
+      "alt-g p": "editor::GoToPreviousDiagnostic", // previous-error
+      "ctrl-x ctrl-u": "editor::ConvertToUpperCase", // upcase-region
+      "ctrl-x ctrl-l": "editor::ConvertToLowerCase" // downcase-region
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-x d": "project_panel::ToggleFocus" // dired
+    }
   }
 ]
